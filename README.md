@@ -1,2 +1,28 @@
-# javascript-quiz
-This is a quiz used to help practice HTML, CSS, and JavaScript.
+# Random Password Generator
+
+This is a simnple coding quiz. Answer the code questions to help practice the fundamentals of front end development.
+
+# Scope of Work
+
+This is a quiz built primarily with JavaScript and utilizing bootstrap.
+
+## Website URL
+
+My website can be accessed [here](#)
+
+## Authors
+
+* Eli D. Ter Keurst
+
+## Preview 
+
+A preview of the site can be found below:
+![Screenshot of website]( "Website Screenshot")
+
+## Credits
+
+N/A
+
+## License
+
+N/A
