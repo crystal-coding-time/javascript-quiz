@@ -5,7 +5,7 @@ let intro = document.querySelector("#introduction");
 let assesFT = document.querySelector("#assess-ft");
 let progressBar = document.querySelector(".progress");
 let startBtn = document.querySelector("#startBtn");
-let timeSpan = document.querySelector("#timeSpan");
+let spanTime = document.querySelector("#spanTime");
 let questionH5 = document.querySelector("#question");
 let answersDiv = document.querySelector("#answers");
 let allDone = document.querySelector("#allDone");
@@ -50,7 +50,7 @@ init();
 /* ------------- Functions Declaration ------------- */
 
 function init() {
-  timeSpan.textContent = timeRemining;
+  spanTime.textContent = timeRemining;
   quiz.style.display = "none";
   allDone.style.display = "none";
   assesFT.style.display = "none";
@@ -67,7 +67,7 @@ function init() {
   correctAnswers = 0;
   correctScore = 0;
   justRegistered = false;
-  timeSpan.textContent = timeRemining;
+  spanTime.textContent = timeRemining;
 
   if (localStorage.getItem("highscore")) {
     localHighscoresArray = localStorage.getItem("highscore").split(",");
@@ -94,7 +94,7 @@ function startQuiz() {
 
 function timer() {
   timeRemining = totalSeconds - secondsElapsed - 1 - discountSeconds;
-  timeSpan.textContent = timeRemining;
+  spanTime.textContent = timeRemining;
   secondsElapsed++;
   if (timeRemining <= 0) {
     clearInterval(time);
@@ -184,9 +184,10 @@ function assesSelection(event) {
   }
 }
 
+/* --------------- This targets the progress bar --------------- */ 
 function updateProgress() {
   progress = Math.floor((currentQuestion / quizQuestions.length) * 100);
-  var styleStr = String("width: " + progress + "%; height: 100%;");
+  var styleStr = String("width: " + progress + "%; height: 100%;"); 
   progressBar.firstElementChild.setAttribute("style", styleStr);
   progressBar.firstElementChild.textContent = progress + " %";
   correctScore = Math.floor((correctAnswers / quizQuestions.length) * 100);
@@ -208,9 +209,9 @@ function displayFTAlert(correct) {
     assesFT.innerHTML =
       "<strong>Incorrect. </strong> 5 Second Penalty";
     assesFT.style.display = "block";
-    timeSpan.style.color = "red";
+    spanTime.style.color = "red";
     setTimeout(function () {
-      timeSpan.style.color = "black";
+      spanTime.style.color = "black";
     }, 1000);
   }
 }
@@ -224,6 +225,7 @@ function removeQuestionsButtons() {
   }
 }
 
+/* --------------- This is for the end of the game --------------- */ 
 function gameOver(cause) {
   if (cause === "questions_done") {
     console.log("QUESTIONS DONE");
@@ -286,6 +288,7 @@ function addToHighscores() {
   initials.value = "";
 }
 
+/* --------------- This stores the users score --------------- */ 
 function loadHighScores() {
   var tempHighscoresArray = [];
   var tempHighscoresObject = {};
@@ -398,6 +401,7 @@ function loadHighScores() {
   }
 }
 
+/* --------------- This clears the highscore on the local storage --------------- */ 
 function clearHighscores() {
   localHighscoresArray = [];
   localStorage.setItem("highscore", localHighscoresArray);
