@@ -8,7 +8,7 @@ This is a quiz built primarily with JavaScript and utilizing bootstrap.
 
 ## Website URL
 
-My website can be accessed [here](#)
+My website can be accessed [here](https://crystal-coding-time.github.io/javascript-quiz/)
 
 ## Authors
 
@@ -17,7 +17,7 @@ My website can be accessed [here](#)
 ## Preview 
 
 A preview of the site can be found below:
-![Screenshot of website]( "Website Screenshot")
+![Screenshot of website](./Assets/Images/website-screenshot.png "Website Screenshot")
 
 ## Credits
 
