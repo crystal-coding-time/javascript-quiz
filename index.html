@@ -17,27 +17,14 @@
       </header>
 
       <!-- Highscores -->
-      <section
-        class="modal fade"
-        id="staticBackdrop"
-        data-backdrop="static"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
+      <section class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h2 class="modal-title" id="staticBackdropLabel">
                 Highscores
               </h2>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -45,20 +32,8 @@
               <ul class="list-group" id="highScoresList"></ul>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                id="clearHighscoresBtn"
-              >
-                Clear Highscores
-              </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="resetHighscoresBtn">Reset Highscores</button>
             </div>
           </div>
         </div>
@@ -73,18 +48,10 @@
             <div class="col">
 
               <!-- Button trigger using Bootstrap modal -->
-              <a
-                style="text-decoration: none;"
-                id="viewHighscores"
-                data-toggle="modal"
-                data-target="#staticBackdrop"
-                href="#"
-                >View Highscores</a
-              >
+              <a style="text-decoration: none;" id="viewHighscores" data-toggle="modal" data-target="#staticBackdrop" href="#">View Highscores</a>
             </div>
             <div class="col text-right">
-              <p class="mb-0" id="timeP">
-                Available Time <strong><span id="spanTime"></span></strong>
+              <p class="mb-0" id="timeP"> Available Time <strong><span id="spanTime"></span></strong>
               </p>
             </div>
           </div>
@@ -130,8 +97,7 @@
                   class="form-control mr-2"
                   type="text"
                   id="initials"
-                  placeholder="Enter your initials"
-                />
+                  placeholder="Enter your initials"/>
                 <button type="submit" class="btn btn-info" id="submit">
                   Submit
                 </button>
@@ -143,13 +109,9 @@
         <!-- Card Footer -->
         <div class="card-footer text-muted p-0">
           <div class="progress" style="height: 100%;">
-            <div
-              class="progress-bar bg-info progress-bar-striped progress-bar-animated"
-              style="width: 0%; height: 100%;"
-            ></div>
+            <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 0%; height: 100%;"></div>
           </div>
           <div class="alert alert-success mt-0 mb-0 pt-0 pb-0" id="assess-ft">
-            <strong></strong>
           </div>
         </div>
       </section>

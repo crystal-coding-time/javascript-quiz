@@ -13,7 +13,7 @@ let finalScore = document.querySelector("#finalScore");
 let submit = document.querySelector("#submit");
 let highScoresList = document.querySelector("#highScoresList");
 let initials = document.querySelector("#initials");
-let clearHighscoresBtn = document.querySelector("#clearHighscoresBtn");
+let resetHighscoresBtn = document.querySelector("#resetHighscoresBtn");
 
 /* ------- Global Variable Declarations ------- */
 
@@ -35,7 +35,7 @@ clearInterval(time);
 startBtn.addEventListener("click", startQuiz);
 answersDiv.addEventListener("click", assesSelection);
 submit.addEventListener("click", addToHighscores);
-clearHighscoresBtn.addEventListener("click", clearHighscores);
+resetHighscoresBtn.addEventListener("click", clearHighscores);
 $("#staticBackdrop").on("shown.bs.modal", function (e) {
   loadHighScores();
 });
@@ -234,7 +234,7 @@ function gameOver(cause) {
         "class",
         "alert alert-dark mt-0 mb-0 pt-0 pb-0 text-center"
       );
-      assesFT.innerHTML = "<strong>Quiz finished</strong> Good luck!";
+      assesFT.innerHTML = "<strong>Quiz Completed</strong>";
     }, 1500);
     clearInterval(time);
   } else if (cause === "time_out") {
