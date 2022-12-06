@@ -1,4 +1,4 @@
-# Random Password Generator
+# JavaScript Quiz
 
 This is a simnple coding quiz. Answer the code questions to help practice the fundamentals of front end development.
 
